@@ -1,0 +1,49 @@
+.header-wrapper{
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 5rem);
+  height: 80vh;
+  padding: 1rem 5rem;
+
+  .text-side{
+    width: 40%;
+    align-self: center;
+
+    h1{
+      font-size: 26px;
+      color: black;
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: 3.5rem;
+    }
+
+    .text-container{
+      width: 96%;
+
+      p{
+        color: black;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        margin: 0px;
+        line-height: 3.5rem;
+      }
+
+      p:nth-last-child(1){
+        margin-top: 4rem;
+      }
+    }
+  }
+
+  .img-side{
+    width: calc(60% - 2.5rem);
+    height: 100%;
+    margin-right: 2.5rem;
+
+    img{
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

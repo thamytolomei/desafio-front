@@ -1,0 +1,260 @@
+.card-wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 2rem);
+  position: relative;
+  margin: 1rem;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+
+  .color-rule{
+    width: 10px;
+    height: 100%;
+    border-radius: 5px 0px 0px 5px;
+    background-color:#FF7272;
+    position: absolute;
+    left: 0px;
+  }
+
+  .inner-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-self: flex-start;
+    padding: 1rem 2rem;
+    background-color: #F5CDCA;
+    border-radius: 5px;
+
+    .upper-section{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .date-circle{
+        border-radius: 100px;
+        background-color: white;
+        border: 2px solid #FF7272;
+        padding: 3px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+
+        h1, span{
+          color: #FF7272;
+          font-weight: 500;
+        }
+
+        h1{
+          font-size: 22px;
+          margin: 5px;
+          margin-bottom: 0px;
+        }
+
+        span{
+          font-size: 18px;
+          margin: 3px;
+          margin-top: 0px;
+        }
+      }
+
+      .task-title{
+        margin-left: 1rem;
+
+        span{
+          font-size: 18px;
+          font-weight: 600;
+          color: #FF7272;
+        }
+      }
+    }
+
+    .bottom-section{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .description{
+        width: 80%;
+        max-height: 4rem;
+        margin: 1rem 0rem;
+
+        span{
+          font-size: 16px;
+          font-weight: 500;
+          color: #FF7272;
+        }
+      }
+
+      .btn-row{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        right: 1rem;
+        bottom: 10px;
+        width: 4rem;
+
+        app-svg-icons, ::ng-deep svg{
+          display: block;
+          height: 2.5rem;
+          width: 2.5rem;
+          color: #FF7272;
+        }
+
+        .odd{
+          ::ng-deep svg{
+            height: 100% !important;
+            width: 1.5rem !important;
+          }
+        }
+      }
+    }
+  }
+
+  &.done{
+    .color-rule{
+      background-color: #7DC16C !important;
+    }
+    .inner-card{
+      background-color: #D4E4C7 !important;
+    }
+
+    .date-circle{
+      border: 2px solid #7DC16C !important;
+    }
+
+    h1, span, .task-title > span, .bottom-section > span {
+      color: #7DC16C !important;
+    }
+
+    .bottom-section > .description > span{
+      color: #7DC16C !important;
+    }
+
+    .btn-row{
+      app-svg-icons, ::ng-deep svg{
+        color: #7DC16C !important;
+      }
+    }
+  }
+
+  &.progress{
+    .color-rule{
+      background-color: #45AAB1 !important;
+    }
+    .inner-card{
+      background-color: #CEE9EC !important;
+    }
+
+    .date-circle{
+      border: 2px solid #45AAB1 !important;
+    }
+
+    h1, span, .task-title > span, .bottom-section > span {
+      color: #45AAB1 !important;
+    }
+
+    .bottom-section > .description > span{
+      color: #45AAB1 !important;
+    }
+
+    .btn-row{
+      app-svg-icons, ::ng-deep svg{
+        color: #45AAB1 !important;
+      }
+    }
+  }
+
+  &.late{
+    .color-rule{
+      background-color: #C1AB55 !important;
+    }
+    .inner-card{
+      background-color: #F3E8C8 !important;
+    }
+
+    .date-circle{
+      border: 2px solid #C1AB55 !important;
+    }
+
+    h1, span, .task-title > span, .bottom-section > span {
+      color: #C1AB55 !important;
+    }
+
+    .bottom-section > .description > span{
+      color: #C1AB55 !important;
+    }
+
+    .btn-row{
+      app-svg-icons, ::ng-deep svg{
+        color: #C1AB55 !important;
+      }
+    }
+  }
+
+  &.splate{
+    .color-rule{
+      background-color: #FF7272 !important;
+    }
+    .inner-card{
+      background-color: #F5CDCA !important;
+    }
+
+    .date-circle{
+      border: 2px solid #FF7272 !important;
+    }
+
+    h1, span, .task-title > span, .bottom-section > span {
+      color: #FF7272 !important;
+    }
+
+    .bottom-section > .description > span{
+      color: #FF7272 !important;
+    }
+
+    .btn-row{
+      app-svg-icons, ::ng-deep svg{
+        color: #FF7272 !important;
+      }
+    }
+  }
+
+  &.cancelled{
+    .color-rule{
+      background-color: #707070 !important;
+    }
+    .inner-card{
+      background-color: #EBEAE9 !important;
+    }
+
+    .date-circle{
+      border: 2px solid #707070 !important;
+    }
+
+    h1, span, .task-title > span, .bottom-section > span {
+      color: #707070 !important;
+    }
+
+    .bottom-section > .description > span{
+      color: #707070 !important;
+    }
+
+    .btn-row{
+      app-svg-icons, ::ng-deep svg{
+        color: #707070 !important;
+      }
+    }
+  }
+}

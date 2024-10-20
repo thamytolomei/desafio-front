@@ -1,0 +1,12 @@
+<div class="section-wrapper">
+  <div class="header" id="sectionHeader">
+    <label>Lista de Tarefas</label>
+  </div>
+  <div class="card-list">
+    <app-task-item [taskStatus]="'super-late'"></app-task-item>
+    <app-task-item [taskStatus]="'late'"></app-task-item>
+    <app-task-item [taskStatus]="'progress'"></app-task-item>
+    <app-task-item [taskStatus]="'done'"></app-task-item>
+    <app-task-item [taskStatus]="'cancelled'"></app-task-item>
+  </div>
+</div>

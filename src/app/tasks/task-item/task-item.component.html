@@ -1,0 +1,28 @@
+<div class="card-wrapper"
+[class.done]="taskStatus == 'done'"
+[class.late]="taskStatus == 'late'"
+[class.splate]="taskStatus == 'super-late'"
+[class.progress]="taskStatus == 'progress'"
+[class.cancelled]="taskStatus == 'cancelled'">
+<div class="color-rule"></div>
+<div class="inner-card">
+  <div class="upper-section">
+    <div class="date-circle">
+      <h1>14</h1>
+      <span>Out</span>
+    </div>
+    <div class="task-title">
+      <span>Lavar os Pratos</span>
+    </div>
+  </div>
+  <div class="bottom-section">
+    <div class="description">
+      <span>Lave os pratos, coloque-os na maquina e guarde-os o armário em cima da pia</span>
+    </div>
+    <div class="btn-row">
+      <app-svg-icons name="trashbin" class="odd"></app-svg-icons>
+      <app-svg-icons name="edit-menu"></app-svg-icons>
+    </div>
+  </div>
+</div>
+</div>

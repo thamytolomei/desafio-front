@@ -1,0 +1,17 @@
+<div class="section-wrapper">
+  <div class="header" id="sectionHeader">
+    <label> Adicionar Tarefa</label>
+  </div>
+  <div class="form-container">
+    <app-form-input
+    [fieldTitle]="'Título da Tarefa'"
+    [fieldType]="'Texto'"></app-form-input>
+    <app-form-input
+    [fieldTitle]="'Data de Entrega'"
+    [fieldType]="'Data'"></app-form-input>
+    <app-form-input
+    [fieldTitle]="'Descrição da Tarefa'"
+    [fieldType]="'Descricao'"></app-form-input>
+    <button><app-svg-icons name="add-btn"></app-svg-icons> Salvar Tarefa</button>
+  </div>
+</div>

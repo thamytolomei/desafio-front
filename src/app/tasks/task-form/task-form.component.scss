@@ -1,0 +1,53 @@
+.section-wrapper{
+  width: 100%;
+  max-height: 80vh;
+  margin: 1.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+
+  .form-container{
+    height: 100%;
+    margin: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    button{
+      outline: none;
+      border: 2px solid black;
+      border-radius: 32px;
+      background-color: transparent;
+      align-self: center;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 0.8rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat' !important;
+      -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+      -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+
+      app-svg-icons, ::ng-deep svg{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 10px;
+        display: block;
+        color: black;
+      }
+
+      &:hover{
+        background-color: black !important;
+        color: white;
+        cursor: pointer;
+        transition: 0.3;
+
+        app-svg-icons, ::ng-deep svg{
+          color: white !important;
+        }
+      }
+    }
+  }
+}

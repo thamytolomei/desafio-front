@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  overflow-y: scroll;
+  overflow-x: hidden !important;
+  scrollbar-width: thin;
+  font-family: "Montserrat" !important;
+  font-size: 15px;
+
+  body{
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+
+  textarea:focus,
+  input:focus {
+      outline: none;
+  }
+
+  #sectionHeader{
+    padding: 1.5rem 2rem;
+    background-color: #707070;
+    width: 100%;
+    padding-left: 2.5rem;
+
+    label{
+      font-size: 18px;
+      color: white;
+      font-weight: 500;
+      text-align: left;
+    }
+  }
+
+  #inputLabel{
+    background-color: #707070;
+    padding: 6px 8px;
+    border-radius: 3px 3px 0px 0px;
+
+    label{
+      font-size: 16px;
+      color: white;
+      font-weight: 500;
+      text-align: left;
+    }
+  }
+}

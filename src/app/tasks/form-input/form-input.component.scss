@@ -1,0 +1,29 @@
+.input-wrapper{
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+
+  input, textarea{
+    border-radius: 0px 0px 3px 3px;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+    border: 1px solid #DEDEDE;
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 0px;
+    color: #505050;
+    font-family: 'Montserrat' !important;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  input{
+    height: 2.5rem;
+  }
+
+  textarea{
+    height: 6rem;
+  }
+}
