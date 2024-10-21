@@ -1,17 +1,26 @@
 <div class="section-wrapper">
   <div class="header" id="sectionHeader">
-    <label> Adicionar Tarefa</label>
+    <label>Adicionar Tarefa</label>
   </div>
   <div class="form-container">
     <app-form-input
     [fieldTitle]="'Título da Tarefa'"
-    [fieldType]="'Texto'"></app-form-input>
+    [fieldType]="'Texto'"
+    [fieldValue]="taskToEdit.taskName"
+    (emitValue)="retrieveData($event)"
+    (emitEditedField)="retrieveData($event)"></app-form-input>
     <app-form-input
     [fieldTitle]="'Data de Entrega'"
-    [fieldType]="'Data'"></app-form-input>
+    [fieldType]="'Data'"
+    [fieldValue]="taskToEdit.taskExpiringDate"
+    (emitValue)="retrieveData($event)"
+    (emitEditedField)="retrieveData($event)"></app-form-input>
     <app-form-input
     [fieldTitle]="'Descrição da Tarefa'"
-    [fieldType]="'Descricao'"></app-form-input>
-    <button><app-svg-icons name="add-btn"></app-svg-icons> Salvar Tarefa</button>
+    [fieldType]="'Descricao'"
+    [fieldValue]="taskToEdit.taskDescription"
+    (emitValue)="retrieveData($event)"
+    (emitEditedField)="retrieveData($event)"></app-form-input>
+    <button (click)="persistTask()"><app-svg-icons name="add-btn"></app-svg-icons> Salvar Tarefa</button>
   </div>
 </div>

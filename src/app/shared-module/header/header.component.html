@@ -8,7 +8,18 @@
       <p>Simples, rápido e totalmente offline, o TaskVault coloca o controle nas suas mãos. Concentre-se no que realmente importa, sabendo que suas informações estão protegidas e sempre acessíveis.</p>
     </div>
   </section>
-  <section class="img-side">
-    <!-- <img src="/src/assets/img/card-mock.png" alt=""> -->
+  <section class="right-side">
+    <div class="card-row row1">
+     <app-task-item [forStyleMode]="true" [statusForStyle]="'fine'"></app-task-item>
+     <app-task-item [forStyleMode]="true" [statusForStyle]="'cancelled'"></app-task-item>
+    </div>
+    <div class="card-row row2">
+      <app-task-item [forStyleMode]="true" [statusForStyle]="'done'"></app-task-item>
+      <app-task-item [forStyleMode]="true" [statusForStyle]="'super-late'"></app-task-item>
+    </div>
+    <div class="card-row row3">
+      <app-task-item [forStyleMode]="true" [statusForStyle]="'fine'"></app-task-item>
+      <app-task-item [forStyleMode]="true" [statusForStyle]="'late'"></app-task-item>
+    </div>
   </section>
 </div>

@@ -13,18 +13,17 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
-    TaskFormComponent,
+    FormInputComponent,
     TasksListComponent,
     TaskItemComponent,
-    FormInputComponent,
+    TaskFormComponent,
     FormsModule,
   ],
   exports: [
-    TaskFormComponent,
+    FormInputComponent,
     TasksListComponent,
     TaskItemComponent,
-    FormInputComponent,
-    FormsModule,
+    TaskFormComponent,
   ],
   providers: [ provideHttpClient(withFetch()) ]
 })

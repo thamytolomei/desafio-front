@@ -9,6 +9,33 @@
   -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+  transition: .4s all;
+
+  &:hover {
+    top: -5px;
+    transition: .4s all;
+    cursor: pointer;
+    filter: brightness(1.1);
+  }
+
+  &.mini{
+    width: 20rem;
+
+    ::ng-deep .description{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      font-size: 14px;
+    }
+
+    ::ng-deep .collapsable-menu{
+      top: -15px !important;
+    }
+
+    &:hover {
+      top: -15px;
+    }
+  }
 
   .color-rule{
     width: 10px;
@@ -69,11 +96,19 @@
 
       .task-title{
         margin-left: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        max-width: 70%;
 
         span{
           font-size: 18px;
           font-weight: 600;
           color: #FF7272;
+
+          @media only screen and (max-width:993px){
+            font-size: 16px;
+          }
         }
       }
     }
@@ -90,6 +125,13 @@
         max-height: 4rem;
         margin: 1rem 0rem;
 
+        @media only screen and (max-width:993px){
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+          font-size: 14px;
+        }
+
         span{
           font-size: 16px;
           font-weight: 500;
@@ -99,16 +141,17 @@
 
       .btn-row{
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: flex-end;
         position: absolute;
         right: 1rem;
         bottom: 10px;
         width: 4rem;
+        height: 100%;
 
         app-svg-icons, ::ng-deep svg{
           display: block;
-          height: 2.5rem;
+          height: 2rem;
           width: 2.5rem;
           color: #FF7272;
         }
@@ -116,7 +159,68 @@
         .odd{
           ::ng-deep svg{
             height: 100% !important;
-            width: 1.5rem !important;
+            width: 1.8rem !important;
+            margin-bottom: 5px;
+            margin-right: 10px;
+          }
+        }
+
+        .collapsable-menu {
+          width: 10rem;
+          height: fit-content;
+          background-color: #fff;
+          -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+          -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+          position: absolute;
+          z-index: 10;
+          top: -50px;
+          right: -1px;
+          padding: 0px 10px;
+          border-radius: 6px;
+
+          .option {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            padding:10px;
+            cursor: pointer;
+
+            span {
+              color: #707070;
+              font-weight: bold;
+              font-size: 14px;
+              margin-bottom: 0px;
+            }
+
+            &:hover, &.active {
+              background-color:#dcd8d8;
+            }
+
+            .icon-container {
+              width: 18px;
+              height: 27px;
+              margin-right: 9px;
+
+              app-svg-icons, ::ng-deep svg{
+                display: block;
+                height: 100%;
+                width: 100%;
+                color: #707070;
+              }
+
+              &.close{
+                width: 15px !important;
+                height: 20px !important;
+              }
+            }
+
           }
         }
       }
@@ -146,6 +250,13 @@
     .btn-row{
       app-svg-icons, ::ng-deep svg{
         color: #7DC16C !important;
+
+        &:hover{
+          app-svg-icons, ::ng-deep svg{
+          color: #517e46 !important;
+          cursor: pointer;
+          }
+        }
       }
     }
   }
@@ -173,6 +284,13 @@
     .btn-row{
       app-svg-icons, ::ng-deep svg{
         color: #45AAB1 !important;
+
+        &:hover{
+          app-svg-icons, ::ng-deep svg{
+            color: #2d696d !important;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
@@ -200,6 +318,12 @@
     .btn-row{
       app-svg-icons, ::ng-deep svg{
         color: #C1AB55 !important;
+        &:hover{
+          app-svg-icons, ::ng-deep svg{
+            color: #574e2a !important;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
@@ -227,6 +351,13 @@
     .btn-row{
       app-svg-icons, ::ng-deep svg{
         color: #FF7272 !important;
+
+        &:hover{
+          app-svg-icons, ::ng-deep svg{
+            color: #5c2c2c !important;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
@@ -254,6 +385,13 @@
     .btn-row{
       app-svg-icons, ::ng-deep svg{
         color: #707070 !important;
+
+        &:hover{
+          app-svg-icons, ::ng-deep svg{
+            color: #464646 !important;
+            cursor: pointer;
+          }
+        }
       }
     }
   }

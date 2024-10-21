@@ -1,6 +1,30 @@
-.card-list{
-  padding: 1.5rem;
-  max-height: 70vh;
-  overflow-y: scroll;
-  scrollbar-width: thin;
+.section{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+
+  @media only screen and (max-width:993px){
+    flex-direction: column !important;
+  }
+
+  .section-wrapper, app-task-form{
+    width: 50%;
+
+    @media only screen and (max-width:993px){
+      width: 100%;
+    }
+
+    .card-list{
+      padding: 4rem;
+      max-height: 70vh;
+      overflow-y: scroll;
+      scrollbar-width: thin;
+
+      @media only screen and (max-width:993px){
+        padding: 3rem 1rem !important;
+
+      }
+    }
+  }
 }
+

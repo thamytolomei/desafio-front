@@ -15,7 +15,6 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     HeaderComponent,
     NavbarComponent,
     FooterComponent,
-    TasksModule,
     FormsModule
   ],
   exports: [

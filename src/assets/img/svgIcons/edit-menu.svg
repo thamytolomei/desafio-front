@@ -1,21 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.915" height="42.33" viewBox="0 0 56.915 42.33">
-  <defs>
-    <filter id="Icon_open-pencil" x="0" y="0" width="42.33" height="42.33" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="Grupo_72" data-name="Grupo 72" transform="translate(-29.756 5.33)">
-    <g id="Grupo_41" data-name="Grupo 41" transform="translate(38.756 0.67)">
-      <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Icon_open-pencil)">
-        <path id="Icon_open-pencil-2" data-name="Icon open-pencil" d="M18.247,0,15.206,3.041l6.082,6.082L24.33,6.082ZM12.165,6.082,0,18.247V24.33H6.082L18.247,12.165Z" transform="translate(9 6)" fill="currentColor"/>
-      </g>
-      <line id="Linha_15" data-name="Linha 15" x2="18.766" transform="translate(27.649 5.83)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"/>
-      <line id="Linha_16" data-name="Linha 16" x2="24.585" transform="translate(21.83 14.83)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"/>
-      <line id="Linha_17" data-name="Linha 17" x2="33.585" transform="translate(12.83 23.83)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="47.915" height="25.33" viewBox="0 0 47.915 25.33">
+  <g id="Grupo_72" data-name="Grupo 72" transform="translate(-602.792 -377.67)">
+    <path id="Icon_open-pencil" data-name="Icon open-pencil" d="M18.247,0,15.206,3.041l6.082,6.082L24.33,6.082ZM12.165,6.082,0,18.247V24.33H6.082L18.247,12.165Z" transform="translate(602.792 377.67)" fill="currentColor"/>
+    <line id="Linha_3" data-name="Linha 3" x2="18.766" transform="translate(630.441 383.5)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"/>
+    <line id="Linha_4" data-name="Linha 4" x2="24.585" transform="translate(624.622 392.5)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"/>
+    <line id="Linha_5" data-name="Linha 5" x2="33.585" transform="translate(615.622 401.5)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"/>
   </g>
 </svg>

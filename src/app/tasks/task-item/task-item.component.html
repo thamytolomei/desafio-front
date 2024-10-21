@@ -1,27 +1,54 @@
 <div class="card-wrapper"
-[class.done]="taskStatus == 'done'"
-[class.late]="taskStatus == 'late'"
-[class.splate]="taskStatus == 'super-late'"
-[class.progress]="taskStatus == 'progress'"
-[class.cancelled]="taskStatus == 'cancelled'">
+[class.done]="taskItem.status === 'done'"
+[class.late]="taskItem.status === 'late'"
+[class.splate]="taskItem.status === 'super-late'"
+[class.progress]="taskItem.status === 'fine'"
+[class.cancelled]="taskItem.status === 'cancelled'"
+[class.mini]="forStyleMode">
 <div class="color-rule"></div>
 <div class="inner-card">
   <div class="upper-section">
     <div class="date-circle">
-      <h1>14</h1>
-      <span>Out</span>
+      <h1>{{ taskItem.taskExpiringDate | date: 'dd' }}</h1>
+      <span>{{ taskItem.taskExpiringDate | date:'MMMM' | slice: 0:3}}</span>
     </div>
     <div class="task-title">
-      <span>Lavar os Pratos</span>
+      <span> {{ taskItem.taskName }} </span>
     </div>
   </div>
   <div class="bottom-section">
     <div class="description">
-      <span>Lave os pratos, coloque-os na maquina e guarde-os o armário em cima da pia</span>
+      <span>{{ taskItem.taskDescription }}</span>
     </div>
     <div class="btn-row">
-      <app-svg-icons name="trashbin" class="odd"></app-svg-icons>
-      <app-svg-icons name="edit-menu"></app-svg-icons>
+      <app-svg-icons name="trashbin" class="odd"  (click)="removeItem()"></app-svg-icons>
+      <app-svg-icons name="edit-menu"  (click)="collapsableMenu = !collapsableMenu"></app-svg-icons>
+      <div class="collapsable-menu" *ngIf="collapsableMenu">
+        <div class="option" (click)="editTask(taskItem)">
+          <div class="icon-container pencil">
+            <app-svg-icons name="pencil">/</app-svg-icons>
+          </div>
+          <span>Editar Tarefa</span>
+        </div>
+        <div class="option" (click)="updatedStatus('done')">
+          <div class="icon-container">
+            <app-svg-icons name="check">/</app-svg-icons>
+          </div>
+          <span>Concluir Tarefa</span>
+        </div>
+        <div class="option" (click)="updatedStatus('cancelled')">
+          <div class="icon-container">
+            <app-svg-icons name="cancel">/</app-svg-icons>
+          </div>
+          <span>Cancelar Tarefa</span>
+        </div>
+        <div class="option" (click)="collapsableMenu = false">
+          <div class="icon-container close">
+            <app-svg-icons name="close">/</app-svg-icons>
+          </div>
+          <span>Fechar Menu</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>

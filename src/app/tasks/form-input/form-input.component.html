@@ -2,7 +2,7 @@
   <div class="header" id="inputLabel">
     <label>{{ fieldTitle }}</label>
   </div>
-  <input *ngIf="fieldType == 'Texto'" type="text" [(ngModel)]="inputValue" placeholder="Digite aqui..."/>
-  <input *ngIf="fieldType == 'Data'" type="date" [(ngModel)]="inputValue" placeholder="01/01/1970"/>
-  <textarea *ngIf="fieldType == 'Descricao'" [(ngModel)]="inputValue" placeholder="Digite a descrição da tarefa"></textarea>
+  <input *ngIf="fieldType == 'Texto'" type="text" [(ngModel)]="taskField.value" (blur)="sendValue('name')" placeholder="Digite aqui..." />
+  <input *ngIf="fieldType == 'Data'" type="date" [(ngModel)]="taskField.value" (blur)="sendValue('date')" placeholder="01/01/1970"/>
+  <textarea *ngIf="fieldType == 'Descricao'" [(ngModel)]="taskField.value" (blur)="sendValue('description')" placeholder="Digite a descrição da tarefa"></textarea>
 </div>

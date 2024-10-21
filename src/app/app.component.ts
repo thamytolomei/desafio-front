@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SharedModuleModule } from './shared-module/shared-module.module';
-import { TasksModule } from './tasks/tasks.module';
+import { taskModel } from './models/taskModel';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,9 @@ import { TasksModule } from './tasks/tasks.module';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'desafio_front';
+
+  ngOnInit(): void {
+  }
 }

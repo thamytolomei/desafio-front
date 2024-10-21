@@ -3,7 +3,13 @@
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width:993px){
+    padding: 1rem;
+    width: auto !important;
+  }
 
   label, span{
     color: black;
@@ -20,6 +26,10 @@
   span{
     font-size: 22px;
     font-weight: 400;
+
+    @media only screen and (max-width:993px){
+      display: none;
+    }
   }
 
   button{
